@@ -5,11 +5,11 @@
 Bienvenido al **Software de Gestión Integral** desarrollado para el supermercado *Jumbox*.  
 Esta aplicación permite gestionar de manera eficiente **inventario**, **compras** y **delivery**, ofreciendo acceso diferenciado para:
 
-- 👤 **Administradores**
-- 🛍️ **Clientes**
-- 🚚 **Repartidores**
+- **Administradores**
+- **Clientes**
+- **Repartidores**
 
----
+
 
 ## Funcionalidades principales
 
@@ -18,17 +18,17 @@ Esta aplicación permite gestionar de manera eficiente **inventario**, **compras
 - Coordinación de entregas a domicilio.
 - Roles de usuario con acceso a funciones específicas.
 
----
+
 
 ## Tecnologías utilizadas
 
 - Lenguaje: Java
 
----
+
 
 ## Diagrama de clases
 
----
+
 
 ### Instalación
 
