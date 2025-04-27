@@ -9,11 +9,11 @@ public class Sucursal {
 	private Repartidor repartidor;
 	private Encargado_stock encargado_stock;
 	private LinkedList<Producto>productos = new LinkedList<Producto>();
-	private LinkedList<Venta>productos = new LinkedList<Venta>();
+	private LinkedList<Venta>ventas = new LinkedList<Venta>();
 	
 	//Constructor
 	public Sucursal(int id, String nombre, String direccion, Cliente cliente, Repartidor repartidor,
-					Encargado_stock encargado_stock, LinkedList<Producto> productos) {
+			Encargado_stock encargado_stock, LinkedList<Producto> productos, LinkedList<Venta> ventas) {
 		super();
 		this.id = id;
 		this.nombre = "Jumbox";
@@ -22,6 +22,7 @@ public class Sucursal {
 		this.repartidor = repartidor;
 		this.encargado_stock = encargado_stock;
 		this.productos = productos;
+		this.ventas = ventas;
 	}
 
 	//Getters and Setters
@@ -81,28 +82,17 @@ public class Sucursal {
 		this.productos = productos;
 	}
 
-	public LinkedList<Venta> getProductos() {
-		return productos;
+	public LinkedList<Venta> getVentas() {
+		return ventas;
 	}
 
-	public void setProductos(LinkedList<Venta> productos) {
-		this.productos = productos;
+	public void setVentas(LinkedList<Venta> ventas) {
+		this.ventas = ventas;
 	}
 
-	//To String
 	@Override
 	public String toString() {
 		return "Sucursal [id=" + id + ", nombre=" + nombre + ", direccion=" + direccion + "]";
 	}
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
 	
 }
