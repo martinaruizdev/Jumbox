@@ -28,6 +28,8 @@ Esta aplicación permite gestionar de manera eficiente **inventario**, **compras
 
 ## Diagrama de clases
 
+![Image](https://github.com/user-attachments/assets/2b441c69-fc1e-4835-a215-fb794a0cbdc6)
+
 
 
 ### Instalación
