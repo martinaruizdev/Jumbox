@@ -26,7 +26,7 @@ public class ControllerUsuario{
                 String tipo = rs.getString("tipo");
 
               
-                        usuario =  new Usuario(id, nombre, email, tipo,password);
+                        usuario =  new Usuario(id, nombre, email, tipo,usuario.desencriptar(password));
                   
             }
         } catch (Exception e) {
