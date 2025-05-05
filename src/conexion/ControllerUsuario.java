@@ -4,19 +4,19 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.util.LinkedList;
 
-public class ControllerUsuario {
+public class ControllerUsuario{
 
     private static Connection con = Conexion.getInstance().getConnection();
 
 
     public Usuario login(String nombre, String password) {
-    	Usuario usuario = null;
+    	Usuario usuario = new Usuario();
         try {
             PreparedStatement stmt = con.prepareStatement(
                 "SELECT * FROM usuario WHERE nombre = ? AND password = ?"
             );
             stmt.setString(1, nombre);
-            stmt.setString(2, password);
+            stmt.setString(2, usuario.encriptar(password));
 
             ResultSet rs = stmt.executeQuery();
 
@@ -43,7 +43,7 @@ public class ControllerUsuario {
             statement.setString(1, usuario.getNombre());
             statement.setString(2, usuario.getEmail());
             statement.setString(3, usuario.getTipo());
-            statement.setString(4, usuario.getPassword());
+            statement.setString(4, usuario.encriptar(usuario.getPassword()));
 
             int filas = statement.executeUpdate();
             if (filas > 0) {

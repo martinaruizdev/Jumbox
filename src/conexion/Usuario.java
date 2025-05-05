@@ -1,5 +1,5 @@
 package conexion;
-public class Usuario {
+public class Usuario implements Encriptador{
     protected int id;
     protected String nombre;
     protected String email;
