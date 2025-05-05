@@ -4,6 +4,8 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.util.LinkedList;
 
+import javax.swing.JOptionPane;
+
 public class ControllerUsuario{
 
     private static Connection con = Conexion.getInstance().getConnection();
@@ -53,6 +55,18 @@ public class ControllerUsuario{
             e.printStackTrace();
         }
     }
+    
+    public void Registrarse(Usuario nuevo) {
+		LinkedList<Usuario> creados = mostrarUsuarios();
+		for (Usuario creado : creados) {
+			if (creado.getEmail().equalsIgnoreCase(nuevo.email)) {
+				JOptionPane.showMessageDialog(null, "Usuario creado, con este mismo mail");
+				return;
+			}
+		}
+		agregarUsuario(nuevo);
+		
+	}
 
 
     public LinkedList<Usuario> mostrarUsuarios() {
